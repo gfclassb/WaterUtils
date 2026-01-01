@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "water-utils",
+	"version": "${version}",
+	"name": "Water Utils",
+	"description": "水!",
+	"authors": [
+		"omori_sunny"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/water-utils/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"omori_sunny.waterutils.WaterUtils"
+		],
+		"client": [
+			"omori_sunny.waterutils.WaterUtilsClient"
+		]
+	},
+	"mixins": [
+		"water-utils.mixins.json",
+		{
+			"config": "water-utils.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
